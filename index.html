@@ -8,50 +8,62 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         body {
             text-align: center;
-            font-family: 'Roboto', sans-serif; /* Font più professionale */
-            background-color: #f5f5f5; /* Grigio chiaro moderno */
-            margin: 0; /* Rimuovi il margine predefinito del body */
-            color: #333; /* Testo grigio scuro per contrasto */
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, #f5f5f5, #e0e0e0); /* Professional gradient background */
         }
         .header {
             margin-top: 20px;
             font-size: 24px;
             font-weight: bold;
-            text-shadow: 2px 2px 4px #aaa; /* Ombreggiatura per profondità */
+            text-shadow: 2px 2px 4px #aaa;
         }
         .bar-container {
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            height: 300px; /* Altezza della barra (puoi modificarla) */
-            margin-bottom: 20px;
+            height: 300px;
+            margin-top: auto; /* Push the bar-container to the bottom */
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per profondità */
-            border-radius: 10px; /* Angoli arrotondati */
-            background: #fff; /* Sfondo bianco per il contenitore delle barre */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background: #fff;
+            transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+        }
+        .bar-container:hover {
+            transform: translateY(-10px); /* Slight raise effect on hover */
         }
         .bar {
-            width: 80px; /* Larghezza delle barre aumentata */
-            margin: 0 20px; /* Aumenta lo spazio tra le barre */
+            width: 80px;
+            margin: 0 20px;
             text-align: center;
             color: white;
             font-weight: bold;
-            font-size: 10px; /* Riduci la dimensione del testo all'interno delle barre */
+            font-size: 10px;
             overflow: hidden;
-            border-radius: 5px; /* Angoli arrotondati per le barre */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombra per le barre */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
         }
         .bar:first-child {
-            background-color: #3498db; /* Blu professionale */
-            height: 150px; /* Altezza della prima barra (puoi modificarla) */
+            background-color: #3498db;
+            height: 150px;
         }
         .bar:last-child {
-            background-color: #e74c3c; /* Rosso professionale */
-            height: 200px; /* Altezza della seconda barra (puoi modificarla) */
+            background-color: #e74c3c;
+            height: 200px;
+        }
+        .bar:hover {
+            background-color: #2ecc71; /* Change color on hover */
         }
         @media (max-width: 600px) {
             .bar {
-                width: 50px; /* Larghezza delle barre su dispositivi mobili (puoi modificarla) */
+                width: 70px;
             }
         }
     </style>
@@ -59,7 +71,7 @@
 <body>
     <div class="header">ANNO 2024</div>
     <div class="bar-container">
-        <div class="bar">RICORDI DEPOSITATI<br>+150</div>
+        <div class="bar">RICORSI DEPOSITATI<br>+150</div>
         <div class="bar">RICORSI DECISI<br>+200</div>
     </div>
 </body>
