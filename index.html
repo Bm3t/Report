@@ -1,65 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Bars</title>
+    <title>ANNO 2024</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         body {
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
+            text-align: center;
+            font-family: 'Roboto', sans-serif; /* Font più professionale */
+            background-color: #f5f5f5; /* Grigio chiaro moderno */
+            margin: 0; /* Rimuovi il margine predefinito del body */
+            color: #333; /* Testo grigio scuro per contrasto */
+        }
+        .header {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #aaa; /* Ombreggiatura per profondità */
         }
         .bar-container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-wrap: wrap; /* Aggiunto per gestire il wrapping delle barre su schermi stretti */
+            align-items: flex-end;
+            height: 300px; /* Altezza della barra (puoi modificarla) */
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per profondità */
+            border-radius: 10px; /* Angoli arrotondati */
+            background: #fff; /* Sfondo bianco per il contenitore delle barre */
         }
         .bar {
-            background-color: #333;
-            color: #fff;
+            width: 80px; /* Larghezza delle barre aumentata */
+            margin: 0 20px; /* Aumenta lo spazio tra le barre */
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            flex: 1; /* Distribuisce lo spazio disponibile in modo uniforme tra le barre */
-            max-width: 300px; /* Limita la larghezza massima delle barre */
-        }
-        .separator {
-            width: 2px;
-            background-color: #ccc;
-            margin: 0 10px;
-        }
-        .year {
-            font-size: 28px;
+            color: white;
             font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 50px;
+            font-size: 10px; /* Riduci la dimensione del testo all'interno delle barre */
+            overflow: hidden;
+            border-radius: 5px; /* Angoli arrotondati per le barre */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombra per le barre */
+        }
+        .bar:first-child {
+            background-color: #3498db; /* Blu professionale */
+            height: 150px; /* Altezza della prima barra (puoi modificarla) */
+        }
+        .bar:last-child {
+            background-color: #e74c3c; /* Rosso professionale */
+            height: 200px; /* Altezza della seconda barra (puoi modificarla) */
+        }
+        @media (max-width: 600px) {
+            .bar {
+                width: 50px; /* Larghezza delle barre su dispositivi mobili (puoi modificarla) */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="year">Anno 2024</div>
+    <div class="header">ANNO 2024</div>
     <div class="bar-container">
-        <div class="bar" style="width: 200px;">
-            <strong>Ricorsi depositati</strong>
-            <br>
-            <span>200</span>
-        </div>
-        <div class="separator"></div>
-        <div class="bar" style="width: 300px;">
-            <strong>Ricorsi decisi</strong>
-            <br>
-            <span>300</span>
-        </div>
+        <div class="bar">RICORDI DEPOSITATI<br>+150</div>
+        <div class="bar">RICORSI DECISI<br>+200</div>
     </div>
 </body>
 </html>
-
